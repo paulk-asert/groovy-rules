@@ -1,0 +1,16 @@
+dialect "mvel"
+
+import CraneExample.Crane;
+import CraneExample.Tortoise;
+
+rule "find solution"
+    when
+        $crane : Crane( )
+        $tortoise : Tortoise(
+            quantity + $crane.quantity == 7,
+            quantity * numLegs + $crane.quantity * $crane.numLegs == 20
+        )
+    then
+        System.out.println( "Cranes " + $crane.getQuantity() );
+        System.out.println( "Tortoises " + $tortoise.getQuantity() );
+end
