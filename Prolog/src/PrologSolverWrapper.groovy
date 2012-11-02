@@ -1,5 +1,3 @@
-package prolog
-
 @GrabResolver('https://oss.sonatype.org/content/repositories/snapshots/')
 @Grab('org.prolog4j:prolog4j-api:0.2.1-SNAPSHOT')
 // uncomment one of next three

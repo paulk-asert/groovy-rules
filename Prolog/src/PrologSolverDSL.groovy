@@ -1,5 +1,4 @@
 // inspired by http://www.baptiste-wicht.com/2010/09/solve-einsteins-riddle-using-prolog/
-package prolog
 
 @GrabResolver('https://oss.sonatype.org/content/repositories/snapshots/')
 @Grab('org.prolog4j:prolog4j-api:0.2.1-SNAPSHOT')
