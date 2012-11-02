@@ -25,7 +25,7 @@ menu.eachWithIndex { name, price, i ->
     numOrdered[i] = makeIntVar(name, 0, sum.intdiv(price))
     priceEach[i] = price
 }
-m.addConstraint(choco.Choco.eq(choco.Choco.scalar(numOrdered, priceEach), sum))
+m.addConstraint(eq(scalar(numOrdered, priceEach), sum))
 s.read(m)
 
 def more = s.solve()
