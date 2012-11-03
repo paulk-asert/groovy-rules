@@ -44,12 +44,7 @@ Tortoises and Cranes
 > They are 7 in total, and their legs are 20 in total.
 > How many cranes and tortoises are there?
 
-Solved using [Choco][1] natively, Drools Expert natively and via a DSL and via the JSR331 api using [Choco][1], Container, JSetL
-
-Tools/Libraries
----------------
-
-Find out more about the tools/libraries used at their respective home pages:
+Solved using [Choco][1] natively, Drools Expert natively and via a DSL and via the JSR331 api using [Choco][1], Constrainer (using the "Java" api and with special Groovy syntax), JSetL
 
 [1]: http://www.emn.fr/z-info/choco-solver/ "Choco"
 [2]: http://jacop.osolpro.com/ "JaCoP"
