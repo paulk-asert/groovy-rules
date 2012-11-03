@@ -52,35 +52,21 @@ This version is modelled on the one from this [book of the same name](http://www
 >
 > __The Rules__
 >
-> The man from the center house drinks milk
->
-> The Norwegian owns the first house
->
-> The Dane drinks tea
->
-> The German plays hockey
->
-> The Swede keeps dogs // alternate ending: has a pet dog
->
-> The Briton has a red house  // alternate ending: red abode
->
-> The owner of the green house drinks coffee
->
-> The owner of the yellow house plays baseball
->
-> The person known to play football rears birds // alternate ending: keeps birds
->
-> The man known to play tennis drinks beer
->
-> The green house is on the left side of the white house
->
-> The man known to play volleyball lives next to the one who keeps cats
->
-> The man known to keep horses lives next to the man who plays baseball
->
-> The man known to play volleyball lives next to the one who drinks water
->
-> The Norwegian lives next to the blue house
+> * The man from the center house drinks milk
+> * The Norwegian owns the first house
+> * The Dane drinks tea
+> * The German plays hockey
+> * The Swede keeps dogs
+> * The Briton has a red house
+> * The owner of the green house drinks coffee
+> * The owner of the yellow house plays baseball
+> * The person known to play football rears birds
+> * The man known to play tennis drinks beer
+> * The green house is on the left side of the white house
+> * The man known to play volleyball lives next to the one who keeps cats
+> * The man known to keep horses lives next to the man who plays baseball
+> * The man known to play volleyball lives next to the one who drinks water
+> * The Norwegian lives next to the blue house
 
 It is solved using:
 
