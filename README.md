@@ -30,11 +30,12 @@ Maven repository and has a restrictive GPL license, we have a preference for Cho
 documentation of the two packages to see which better suits your needs. Follow the instructions in the JaCoP directory for downloading
 the needed jars if you want to try it. The other examples should run automatically.
 
-Menu
-----
+Menu Puzzle
+-----------
 
 Inspired by this [xkcd webcomic](http://xkcd.com/287/):
-![NP-Complete Restaurant Orders](http://imgs.xkcd.com/comics/np_complete.png)
+
+<img src="http://imgs.xkcd.com/comics/np_complete.png" width="50%" height="50%"
 
 Tortoises and Cranes
 --------------------
