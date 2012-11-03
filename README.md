@@ -16,8 +16,8 @@ Einstein's Riddle (a Zebra puzzle variant) is solved using:
 
 * prolog directly (for comparative purposes)
 * prolog underneath a Groovy DSL
-* the __choco__ constraint solving library beneath a Groovy DSL
-* the __jacop__ constraint solving library beneath a Groovy DSL
+* the [Choco][1] constraint solving library beneath a Groovy DSL
+* the [JaCoP][2] constraint solving library beneath a Groovy DSL
 
 The interesting thing to note is that the "business rules" are the same for each DSL solution.
 The "DSL helper code" would typically be hidden from the user.
@@ -25,8 +25,7 @@ The "DSL helper code" would typically be hidden from the user.
 The [prolog4j](https://github.com/espakm/prolog4j) generic prolog interface api is used along with the [tuprolog](http://tuprolog.alice.unibo.it/) prolog engine but
 you can try some of the other engines supported by prolog4j if you wish.
 
-The [choco][1] and [JaCoP][2] constraint solving libraries are used.
-These libraries offer similar features as far as this problem is concerned. Given that the JaCoP package isn't available in a public
+[Choco][1] and [JaCoP][2] offer similar features as far as this problem is concerned. Given that the JaCoP package isn't available in a public
 Maven repository and has a restrictive GPL license, we have a preference for Choco for this example; but see the respective
 documentation of the two packages to see which better suits your needs. Follow the instructions in the JaCoP directory for downloading
 the needed jars if you want to try it. The other examples should run automatically.
@@ -34,16 +33,20 @@ the needed jars if you want to try it. The other examples should run automatical
 Menu
 ----
 
-Inspired by this xkcd webcomic:
-![NP-Complete Restaurant Orders](http://xkcd.com/287/)
+Inspired by this [xkcd webcomic](http://xkcd.com/287/):
+![NP-Complete Restaurant Orders](http://imgs.xkcd.com/comics/np_complete.png)
 
 Tortoises and Cranes
 --------------------
 
-Solved using [choco][1] natively, Drools Expert natively and via a DSL and via the JSR331 api using [choco][1], Container, JSetL
+Solved using [Choco][1] natively, Drools Expert natively and via a DSL and via the JSR331 api using [Choco][1], Container, JSetL
 
 Tools/Libraries
 ---------------
 
+Find out more about the tools/libraries used at their respective home pages:
+
 [1]: http://www.emn.fr/z-info/choco-solver/ "Choco"
 [2]: http://jacop.osolpro.com/ "JaCoP"
+[3]: http://www.jboss.org/drools/drools-expert "Drools Expert"
+[4]: http://cmt.math.unipr.it/jsetl.html "JSetL"
