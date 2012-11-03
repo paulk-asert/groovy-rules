@@ -9,10 +9,62 @@ Solves various logic puzzles using a variety of approaches and tools.
 Some of the examples use various DSL techniques to provide a friendly
 readable layer above the underlying tool/library api.
 
+Tortoises and Cranes
+--------------------
+
+> There are some cranes and tortoises.
+> They are 7 in total, and their legs are 20 in total.
+> How many cranes and tortoises are there?
+
+This is a started puzzle. It is solved using:
+
+* [Choco][1] using the native api
+* [Choco][1] using the JSR-331 api
+* [Drools Expert][3] natively
+* [Drools Expert][3] beneath a Groovy DSL
+* [JSetL][4] using the JSR-331 api
+* [Constrainer Light][5] using the JSR-331 api
+* [Constrainer Light][5] with special JSR-331 Groovy syntax
+
+Menu Puzzle
+-----------
+
+This puzzle is inspired by this [xkcd webcomic](http://xkcd.com/287/):
+
+<img src="http://imgs.xkcd.com/comics/np_complete.png" width="50%" height="50%">
+
+It is solved using:
+
+* the [Choco][1] constraint solving library
+
 Einstein's Riddle
 -----------------
 
-Einstein's Riddle (a Zebra puzzle variant) is solved using:
+Einstein's Riddle (a [Zebra Puzzle](http://en.wikipedia.org/wiki/Zebra_puzzle) variant).
+This version is modelled on the one from this [book of the same name](http://www.amazon.co.uk/Einsteins-Riddle-Riddles-Puzzles-Conundrums/dp/1408801493).
+
+> There are five houses painted five different colors.
+> A person with a different nationality lives in each house.
+> The five house owners each drink a different beverage, play a
+> different sport, and keep a different pet. Who owns the fish?
+>
+> The man from the center house drinks milk
+> The Norwegian owns the first house
+> The Dane drinks tea
+> The German plays hockey
+> The Swede keeps dogs // alternate ending: has a pet dog
+> The Briton has a red house  // alternate ending: red abode
+> The owner of the green house drinks coffee
+> The owner of the yellow house plays baseball
+> The person known to play football rears birds // alternate ending: keeps birds
+> The man known to play tennis drinks beer
+> The green house is on the left side of the white house
+> The man known to play volleyball lives next to the one who keeps cats
+> The man known to keep horses lives next to the man who plays baseball
+> The man known to play volleyball lives next to the one who drinks water
+> The Norwegian lives next to the blue house
+
+It is solved using:
 
 * prolog directly (for comparative purposes)
 * prolog underneath a Groovy DSL
@@ -30,23 +82,17 @@ Maven repository and has a restrictive GPL license, we have a preference for Cho
 documentation of the two packages to see which better suits your needs. Follow the instructions in the JaCoP directory for downloading
 the needed jars if you want to try it. The other examples should run automatically.
 
-Menu Puzzle
------------
+Further Information
+-------------------
 
-This puzzle is inspired by this [xkcd webcomic](http://xkcd.com/287/):
-
-<img src="http://imgs.xkcd.com/comics/np_complete.png" width="50%" height="50%">
-
-Tortoises and Cranes
---------------------
-
-> There are some cranes and tortoises.
-> They are 7 in total, and their legs are 20 in total.
-> How many cranes and tortoises are there?
-
-Solved using [Choco][1] natively, Drools Expert natively and via a DSL and via the JSR331 api using [Choco][1], Constrainer (using the "Java" api and with special Groovy syntax), JSetL
+http://openrules.com/jsr331/index.htm
+http://cpstandard.wordpress.com/
+http://jcp.org/en/jsr/detail?id=331
+http://groovy.codehaus.org
+http://www.slideshare.net/glaforge/groovy-domain-specific-languages-springone2gx-2012
 
 [1]: http://www.emn.fr/z-info/choco-solver/ "Choco"
 [2]: http://jacop.osolpro.com/ "JaCoP"
 [3]: http://www.jboss.org/drools/drools-expert "Drools Expert"
 [4]: http://cmt.math.unipr.it/jsetl.html "JSetL"
+[5]: http://openrules.com/jsr331/index.htm "Constrainer Light"
