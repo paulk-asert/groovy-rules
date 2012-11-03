@@ -16,7 +16,7 @@ Tortoises and Cranes
 > They are 7 in total, and their legs are 20 in total.
 > How many cranes and tortoises are there?
 
-This is a started puzzle. It is solved using:
+This is a basic "hello world" puzzle. It is solved using:
 
 * [Choco][1] using the native api
 * [Choco][1] using the JSR-331 api
@@ -85,11 +85,11 @@ the needed jars if you want to try it. The other examples should run automatical
 Further Information
 -------------------
 
-http://openrules.com/jsr331/index.htm
-http://cpstandard.wordpress.com/
-http://jcp.org/en/jsr/detail?id=331
-http://groovy.codehaus.org
-http://www.slideshare.net/glaforge/groovy-domain-specific-languages-springone2gx-2012
+* http://openrules.com/jsr331/index.htm
+* http://cpstandard.wordpress.com/
+* http://jcp.org/en/jsr/detail?id=331
+* http://groovy.codehaus.org
+* http://www.slideshare.net/glaforge/groovy-domain-specific-languages-springone2gx-2012
 
 [1]: http://www.emn.fr/z-info/choco-solver/ "Choco"
 [2]: http://jacop.osolpro.com/ "JaCoP"
