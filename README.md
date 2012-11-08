@@ -36,6 +36,7 @@ This puzzle is inspired by this [xkcd webcomic](http://xkcd.com/287/):
 It is solved using:
 
 * the [Choco][1] constraint solving library
+* the [OrTools][6] constraint solving library
 
 Einstein's Riddle
 -----------------
@@ -100,3 +101,4 @@ Further Information
 [3]: http://www.jboss.org/drools/drools-expert "Drools Expert"
 [4]: http://cmt.math.unipr.it/jsetl.html "JSetL"
 [5]: http://openrules.com/jsr331/index.htm "Constrainer Light"
+[6]: https://code.google.com/p/or-tools/ "OrTools"
