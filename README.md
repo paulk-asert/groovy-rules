@@ -25,6 +25,7 @@ This is a basic "hello world" puzzle. It is solved using:
 * [JSetL][4] using the JSR-331 api
 * [Constrainer Light][5] using the JSR-331 api
 * [Constrainer Light][5] with special JSR-331 Groovy syntax
+* [OrTools][6] constraint solving library
 
 Menu Puzzle
 -----------
