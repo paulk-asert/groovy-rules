@@ -12,7 +12,7 @@ class OrToolsMenu {
     def priceEach = [215, 275, 335, 355, 420, 580]
     int sum = 1505
     int maxNumOrdered = sum.intdiv(priceEach.min())
-    new Solver("OrToolsMenu").with {
+    new Solver(getClass().name).with {
       // in cents so we can use ints
       def numOrdered = makeIntVarArray(priceEach.size(), 0, maxNumOrdered)
       addConstraint(makeEquality(makeScalProd(numOrdered, priceEach as int[]).var(), sum))
