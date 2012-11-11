@@ -1,32 +1,34 @@
-import com.google.ortools.constraintsolver.IntVar
 import com.google.ortools.constraintsolver.Solver
 import groovy.transform.CompileStatic
 
-@CompileStatic
 class OrToolsMenu {
-  static { System.loadLibrary("jniconstraintsolver") }
-
+  @CompileStatic
   static void main(args) {
-    def solver = new Solver("OrToolsMenu")
-    // in cents so we can use ints
-    int[] priceEach = [215, 275, 335, 355, 420, 580]
-    int sum = 1505
-    def numOrdered = solver.makeIntVarArray(priceEach.size(), 0, sum.intdiv(priceEach.min()))
-    solver.addConstraint(solver.makeEquality(solver.makeScalProd(numOrdered, priceEach).var(), sum))
-    def db = solver.makePhase(numOrdered, solver.CHOOSE_FIRST_UNBOUND, solver.ASSIGN_MIN_VALUE)
-    solver.newSearch(db)
-    while (solver.nextSolution()) {
-      def vals = numOrdered.collect { IntVar v -> v.value() }
-      println "numOrdered: ${vals.join(' ')}"
-    }
-    solver.endSearch()
+    System.loadLibrary("jniconstraintsolver")
+    solve()
+  }
 
-    // stats
-    println """
-      Solutions : ${solver.solutions()}
-      Failures  : ${solver.failures()}
-      Branches  : ${solver.branches()}
-      Wall time : ${solver.wallTime()} ms
-    """.stripIndent()
+  static solve() {
+    def priceEach = [215, 275, 335, 355, 420, 580]
+    int sum = 1505
+    int maxNumOrdered = sum.intdiv(priceEach.min())
+    new Solver("OrToolsMenu").with {
+      // in cents so we can use ints
+      def numOrdered = makeIntVarArray(priceEach.size(), 0, maxNumOrdered)
+      addConstraint(makeEquality(makeScalProd(numOrdered, priceEach as int[]).var(), sum))
+      newSearch(makePhase(numOrdered, CHOOSE_FIRST_UNBOUND, ASSIGN_MIN_VALUE))
+      while (nextSolution()) {
+        println "numOrdered: ${numOrdered*.value()}"
+      }
+      endSearch()
+
+      // stats
+      println """
+        Solutions : ${solutions()}
+        Failures  : ${failures()}
+        Branches  : ${branches()}
+        Wall time : ${wallTime()} ms
+      """.stripIndent()
+    }
   }
 }
