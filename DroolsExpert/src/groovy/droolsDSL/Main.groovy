@@ -1,18 +1,11 @@
-//5.3.3.Final
+//5.4.0.Final
 @GrabResolver('https://repository.jboss.org/nexus/content/groups/public-jboss/')
-@Grab('org.drools:knowledge-api:5.3.3.Final')
-@Grab('org.drools:drools-compiler:5.3.3.Final')
-@Grab('org.drools:drools-core:5.3.3.Final')
+@Grab('org.drools:knowledge-api:5.4.0.Final')
+@Grab('org.drools:drools-compiler:5.4.0.Final')
+@Grab('org.drools:drools-core:5.4.0.Final')
 @Grab('com.sun.xml.bind:jaxb-xjc:2.2.5.jboss-1')
 @GrabExclude('com.github.relaxng:relaxngDatatype')
-//5.4.1.Final
-//@GrabResolver('https://repository.jboss.org/nexus/content/groups/public-jboss/')
-//@Grab('org.drools:knowledge-api:5.4.1.Final')
-//@Grab('org.drools:drools-compiler:5.4.1.Final')
-//@Grab('org.drools:drools-core:5.4.1.Final')
-//@Grab('com.sun.xml.bind:jaxb-xjc:2.2.5.jboss-1')
-//@GrabExclude('com.github.relaxng:relaxngDatatype')
-//5.5.0-Beta1
+//5.5.0-CR1
 //@GrabResolver('https://repository.jboss.org/nexus/content/groups/public-jboss/')
 //@Grab('org.drools:knowledge-api:5.5.0.CR1')
 //@Grab('org.drools:drools-compiler:5.5.0.CR1')
@@ -32,20 +25,20 @@ import static org.drools.io.ResourceFactory.newReaderResource
 def numAnimals = 7
 def numLegs = 20
 def kbuilder = newKnowledgeBuilder()
-def dslr = '''
+def dslr = """
 dialect "mvel"
 
 rule "deduce animal counts"
   when
     There are some "Cranes"
     There are some "Tortoises"
-    There are ''' + numAnimals + ''' animals in total
-    There are ''' + numLegs + ''' legs in total
+    There are $numAnimals animals in total
+    There are $numLegs legs in total
   then
     Display the number of "Cranes"
     Display the number of "Tortoises"
 end
-'''
+"""
 def dsl = '''
 [when][]There are some "{animals}"=${animals!lc} : {animals}( )
 [when][]There are {numAnimals} animals in total=eval( $cranes.quantity + $tortoises.quantity == {numAnimals} )
