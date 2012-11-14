@@ -21,6 +21,7 @@ This is a basic "hello world" puzzle. It is solved using:
 * [Choco][1] using the native api
 * [Choco][1] using the JSR-331 api
 * [Drools Expert][3] natively
+* [Drools Expert][3] beneath a Drools DSL
 * [Drools Expert][3] beneath a Groovy DSL
 * [JSetL][4] using the JSR-331 api
 * [Constrainer Light][5] using the JSR-331 api
