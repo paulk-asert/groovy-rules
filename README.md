@@ -27,6 +27,7 @@ This is a basic "hello world" puzzle. It is solved using:
 * [Constrainer Light][5] using the JSR-331 api
 * [Constrainer Light][5] with special JSR-331 Groovy syntax
 * [OrTools][6] constraint solving library
+* [Cream][7] constraint solving library
 
 Menu Puzzle
 -----------
@@ -104,3 +105,4 @@ Further Information
 [4]: http://cmt.math.unipr.it/jsetl.html "JSetL"
 [5]: http://openrules.com/jsr331/index.htm "Constrainer Light"
 [6]: https://code.google.com/p/or-tools/ "OrTools"
+[7]: http://bach.istc.kobe-u.ac.jp/cream/ "Cream"
