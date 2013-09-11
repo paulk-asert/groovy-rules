@@ -1,9 +1,11 @@
-//@GrabResolver('https://repository.jboss.org/nexus/content/groups/public-jboss/')
-//@Grab('org.drools:knowledge-api:5.4.0.Final')
-//@Grab('org.drools:drools-compiler:5.4.0.Final')
-//@Grab('org.drools:drools-core:5.4.0.Final')
-//@Grab('com.sun.xml.bind:jaxb-xjc:2.2.5.jboss-1')
-//@GrabExclude('com.github.relaxng:relaxngDatatype')
+@GrabResolver('https://repository.jboss.org/nexus/content/groups/public-jboss/')
+@Grab('org.drools:drools-compiler:5.5.0.Final')
+@Grab('org.drools:drools-core:5.5.0.Final')
+@Grab('com.sun.xml.bind:jaxb-xjc:2.2.5.jboss-1;transitive=false')
+@Grab('com.google.protobuf:protobuf-java:2.4.1')
+@Grab('org.slf4j:slf4j-simple:1.6.4')
+// org.mvel:mvel2:2.1.3.Final has an invalid SHA1 checksum
+// set JAVA_OPTS="-Divy.checksums="
 import groovy.transform.Field
 import org.drools.builder.ResourceType
 

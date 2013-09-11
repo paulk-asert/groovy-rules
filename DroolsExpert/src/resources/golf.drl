@@ -18,12 +18,11 @@
 
 dialect "mvel"
 
-import GolfExample.Golfer;
+import Golfer;
 
 rule "find solution"
     when
         // There is a golfer named Fred,
-        // Whose positions is $p1
         $fred : Golfer( name == "Fred" )
 
         // Joe is in position 2
@@ -49,7 +48,7 @@ rule "find solution"
                 position != $joe.position,
                 position != $bob.position,
                 color != "orange",
-                //color != "blue",
+//                color != "blue",
                 color != $fred.color,
                 color != $joe.color,
                 color != $bob.color )

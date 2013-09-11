@@ -1,7 +1,7 @@
 dialect "mvel"
 
-import CraneExample.Crane;
-import CraneExample.Tortoise;
+import Crane;
+import Tortoise;
 
 rule "find solution"
     when
